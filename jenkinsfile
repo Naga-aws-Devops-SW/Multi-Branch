@@ -1,0 +1,15 @@
+node('master')
+
+{
+
+stage('ContinuousDownload_Test')
+         {
+    git 'https://github.com/sunildevops77/maven.git'
+        }
+
+stage('Continuousbuild_Test')
+         {
+   sh label: '', script: 'mvn package'
+        }
+
+}
